@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>TKTI - TTJ platformasi</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="/assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="/css/styles.css" rel="stylesheet" />
+    <!-- Bootstrap Link -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body>
+    <% var btn=["Kam ta'minlangan oila farzandlari", "Boquvchisini yo'qotgan kop bolali oila a'zosi", "1 va 2-guruh nogironligi bo'lgan talaba", 
+    "To'liq davlat ta'minotidagi (chin yetim)", "Oilasida 2 tadan ko'p to'lov kontrakt asosida o'qiydigan talaba",
+    "\"Temir daftar\"ga tushgan oila farzandi","Oilasida 1 va 2-guruh nogironligi yoki surunkali kasallik bilan davolanadiganlari bo'lgan talaba",
+     'Doimiy ish joyi yo\'q', 'no',"Tadbirlar va jamoat ishlarida faol talaba"] %> 
+    <div class="d-flex" id="wrapper">
+        <!-- Sidebar-->
+        <div class="border-end bg-white" id="sidebar-wrapper">
+            <div class="brand border-bottom bg-light d-flex align-items-center">
+                <a href="http://www.tkti.uz/" target="_blank" class="logo">
+                    <img src="/img/logoTCTI.png" alt="logoTCTI" class="logo-tcti">
+                </a>
+                <p class="logo-text">TKTI - TTJ admin panel</p>
+            </div>
+            <div class="list-group list-group-flush">
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="?FilterByYotoqxona=<%=btn[0]%>">
+                    <img src="/img/svgs/mezon1.svg" class="mezon-img" alt="m-1">
+                    <p>Kam ta'minlangan oila farzandlari</p>
+                </a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="?FilterByYotoqxona=<%=btn[1]%>">
+                    <img src="/img/svgs/mezon2.svg" class="mezon-img" alt="m-1">Boquvchisini
+                    yo'qotgan kop bolali oila a'zosi</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="?FilterByYotoqxona=<%=btn[2]%>"><img
+                        src="/img/svgs/mezon3.svg" class="mezon-img" alt="m-1">1 va 2-guruh
+                    nogironligi bo'lgan talaba</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="?FilterByYotoqxona=<%=btn[3]%>"><img
+                        src="/img/svgs/mezon4.svg" class="mezon-img" alt="m-1">To'liq davlat
+                    ta'minotidagi (chin yetim)</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="?FilterByYotoqxona=<%=btn[4]%>"><img
+                        src="/img/svgs/mezon5.svg" class="mezon-img" alt="m-1">Oilasida 2 tadan
+                    ko'p to'lov kontraktda o'qiydigan</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="?FilterByYotoqxona=<%=btn[5]%>"><img
+                        src="/img/svgs/mezon6.svg" class="mezon-img" alt="m-1">"Temir daftar"ga
+                    tushgan oila farzandi</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="?FilterByYotoqxona=<%=btn[6]%>"><img
+                        src="/img/svgs/mezon8.svg" class="mezon-img" alt="m-1">Oilasida 1 va
+                    2-guruh nogironligi bo'lgan talaba</a>
+                <a class="list-group-item list-group-item-action list-group-item-light p-3" href="?FilterByYotoqxona=<%=btn[8]%>"><img
+                        src="/img/svgs/mezon9.svg" class="mezon-img" alt="m-1">Tadbirlar va
+                    jamoat ishlarida faol talaba</a>
+            </div>
+        </div>
+        <!-- Page content wrapper-->
+        <div id="page-content-wrapper">
+            <!-- Top navigation-->
+            <nav class="navbar navbar-expand-lg navbar-light bg-light border-bottom">
+                <div class="container-fluid">
+                    <button class="btn btn-primary" id="sidebarToggle">Menyuni berkitish </button>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation"><span
+                            class="navbar-toggler-icon"></span></button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav ms-auto mt-2 mt-lg-0">
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button"
+                                    data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Admin</a>
+                                <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+                                    <p class="admin-name"><%= name||"Admin" %> </p>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="/">Chiqish</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+            <!-- Page content-->
+            <div class="container-fluid">
+                <!-- <h1 class="mt-4">Simple Sidebar</h1>
+                <p>The starting state of the menu will appear collapsed on smaller screens, and will appear
+                    non-collapsed on larger screens. When toggled using the button below, the menu will change.</p>
+                <p>
+                    Make sure to keep all page content within the
+                    <code>#page-content-wrapper</code>
+                    . The top navbar is optional, and just for demonstration. Just create an element with the
+                    <code>#sidebarToggle</code>
+                    ID which will toggle the menu when clicked.
+                </p> -->
+                <div class="table table-hover table-responsive">
+                    <table class="table">
+                        <caption>Talabalar ro'yxati</caption>
+                        <thead>
+                            <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Ism familya</th>
+                                <th scope="col">Fakultet</th>
+                                <th scope="col">Bosqich</th>
+                                <th scope="col">Tel. raqam</th>
+                                <th scope="col">Hujjat yuklash</th>
+                                <th scope="col">O'chirish</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <% for( let i = 0; i < students.length; i++ ) { %>
+                              <tr>
+                                    <th scope="row"><%= i+1 %> </th>
+                                    <td><%= students[i].ism %> </td>
+                                    <td><%= students[i].yonalishi %></td>
+                                    <td><%= students[i].nechikurs %></td>
+                                    <td><%= students[i].phone %></td>
+                                    <td><a href="/upload/<%= students[i].file %>" download="<%= students[i].ism %>" class="open-file btn btn-primary">Fayl yuklash</a></td>
+                                    <td><a href="/student/del/<%= students[i]._id %>" class="open-file btn btn-danger">O'chirish</a></td>
+                                </tr>
+                               
+                            <% } %>
+                            
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="/js/scripts.js"></script>
+</body>
+
+</html>

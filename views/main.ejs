@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <title>TTJ - Online</title>
+</head>
+
+<body>
+    <!-- Navbar-->
+    <header class="header">
+        <nav class="py-3">
+            <div class="container">
+                <!-- Navbar Brand -->
+                <div class="nav-brand">
+                    <a href="http://www.tkti.uz" target="_blank" class="nav-logo">
+                        <img src="/img/logo.svg" alt="logo" width="100">
+                    </a>
+                    <h3 class="text-logo">Talabalar turar joyiga hujjatlarni qabul qilish elektron tizimi</h3>
+                    <!-- Client Account -->
+                    <div id="navbar-login" class="form-group col-md-3 mb-3 d-none d-lg-block">
+                        <a href="/admin/login" class="btn btn-primary btn-block py-2">
+                            <span class="font-weight-bold">Login</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <% var btn=["Kam ta'minlangan oila farzandlari", "Boquvchisini yo'qotgan kop bolali oila a'zosi", "1 va 2-guruh nogironligi bo'lgan talaba", 
+    "To'liq davlat ta'minotidagi (chin yetim)", "Oilasida 2 tadan ko'p to'lov kontrakt asosida o'qiydigan talaba",
+    "\"Temir daftar\"ga tushgan oila farzandi","Oilasida 1 va 2-guruh nogironligi yoki surunkali kasallik bilan davolanadiganlari bo'lgan talaba",
+     'Doimiy ish joyi yo\'q', 'no',"Tadbirlar va jamoat ishlarida faol talaba"] %> 
+    <div class="container">
+        <div style="text-align: center; font-size: 15px !important;
+        font-weight: 800 !important;
+        color: <%= (msg=="Ma'lumotlar noto'g'ri kiritildi yoki mavjud telefon raqamdan foydalanildi!")?"red":"green" %> !important;">
+            <%= msg %>
+        </div><br>
+        <div class="guide">
+            <p class="guide-text">
+
+                <span style="font-weight: 700;">!!! Foydalanish uchun qo'llanma:</span>
+                <b>Har bir talaba faqat bir marta va o'ziga taalluqli me'zonga mos bo'lgan tegishli hujjatlarni
+                    yuborishi
+                    shart!</b> <em> <b>Misol uchun:</b> shaxsni tasdiqlovchi pasport va temir daftarda turishi
+                    haqidagi ma'lumotnomalarni skanerda PDF yoki rasm ko'rinishida bir faylga joylab (yoki har birini
+                    alohida) uni nomiga ism,
+                    familya va ta'lim yo'nalishi nomi bilan
+                    nomlang. Shu faylni <b>.zip</b> formatda arxivlab faylni tegishli me'zonga yuklang.</em>
+            </p>
+        </div>
+        <div class="doc-wrapper">
+            <h3 style="font-weight: 600; margin-left: 30px;">Me'zonlar</h3>
+            <ol>
+                <li class="mezon-card"><img src="/svgs/mezon1.svg" alt="" style="max-width: 50px; width: 100%;">Kam
+                    ta'minlangan oila farzandlari</li>
+                <li class="mezon-card"><img src="/svgs/mezon5.svg" alt="" style="max-width: 50px; width: 100%;">Oilasida
+                    2 tadan ko'p to'lov kontrakt asosida o'qiydigan talaba</li>
+                <li class="mezon-card"><img src="/svgs/mezon6.svg" alt="" style="max-width: 50px; width: 100%;">"Temir
+                    daftar"ga tushgan oila farzandi</li>
+                <li class="mezon-card"><img src="/svgs/mezon8.svg" alt="" style="max-width: 50px; width: 100%;">Oilasida
+                    1 va 2-guruh nogironligi yoki surunkali kasallik bilan
+                    davolanadiganlari bo'lgan talaba</li>
+                <h6 class="doc-wrapper-text">Yuqorida keltirilgan me'zonlar uchun: Shaxsiy pasport va ijtimoiy ahvolini
+                    tasdiqlovchi
+                    hujjat. Ikkinchi me'zonga qo'shimcha talabaligini tasdiqlochi hujjat(to'lov kontrakt asosida
+                    o'qiydiganlar)</h6>
+                <li class="mezon-card"><img src="/svgs/mezon2.svg" alt=""
+                        style="max-width: 50px; width: 100%;">Boquvchisini yo'qotgan kop bolali oila a'zosi</li>
+                <li class="mezon-card"><img src="/svgs/mezon4.svg" alt="" style="max-width: 50px; width: 100%;">To'liq
+                    davlat ta'minotidagi (chin yetim)</li>
+                <h6 class="doc-wrapper-text">Yuqorida keltirilgan me'zonlar uchun: Shaxsiy pasport va boquvchisini
+                    yo'qotganligi
+                    (o'limi) haqidagi guvohnoma</h6>
+                <li class="mezon-card"><img src="/svgs/mezon3.svg" alt="" style="max-width: 50px; width: 100%;">1 va
+                    2-guruh nogironligi bo'lgan talaba</li>
+                <h6 class="doc-wrapper-text">Yuqorida keltirilgan me'zonlar uchun: Shaxsiy pasport va sog'ligi haqidagi
+                    ma'lumotnoma</h6>
+                <li class="mezon-card"><img src="/svgs/mezon9.svg" alt=""
+                        style="max-width: 50px; width: 100%;">Tadbirlar va jamoat ishlarida faol talaba</li>
+                <h6 class="doc-wrapper-text">Yuqorida keltirilgan me'zonlar uchun: Shaxsiy pasport va prorektordan
+                    ma'lumotnoma</h6>
+            </ol>
+        </div>
+        <form enctype="multipart/form-data" action="/student/add" method="POST">
+            <div class="row mt-4 align-items-center">
+                <!-- Fullname -->
+                <div class="input-group col-lg-6 mb-4">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text bg-white px-4 border-md border-right-0">
+                            <i class="fas fa-user"><img src="/svgs/user-solid.svg" style="width: 17px;"></i>
+                        </span>
+                    </div>
+                    <input id="fullName" type="text" name="ism" required aria aria-required="true"
+                        placeholder="Familya Ism Sharif" class="form-control bg-white border-left-0 border-md">
+                </div>
+
+                <!-- Phone number -->
+                <div class="input-group col-lg-6 mb-4">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text bg-white px-4 border-md border-right-0">
+                            <i class="fas fa-user"><img src="/svgs/phone-solid.svg" style="width: 17px;"></i>
+                        </span>
+                    </div>
+                    <input id="phoneNumber" type="number" name="phone" required aria aria-required="true"
+                        placeholder="Telefon raqam" class="form-control bg-white border-left-0 border-md">
+                </div>
+
+                <!-- Direction -->
+                <div class="input-group col-lg-6 mb-4">
+                    <span class="input-group-text bg-white px-4 border-md border-right-0">
+                        <i class="fa fa-university-solid"><img src="/svgs/university-solid.svg" style="width: 17px;"
+                                alt=""></i>
+                    </span>
+                    <select id="direction" name="yonalishi"
+                        class="form-control custom-select bg-white border-left-0 border-md">
+                        <option value="disabled">Fakultetni tanlang</option>
+                        <option value="MENEJMENT VA KASB TA`LIMI FAKULTETI">MENEJMENT VA KASB TA`LIMI FAKULTETI</option>
+                        <option value="OZIQ-OVQAT MAHSULOTLARI TEXNOLOGIYASI FAKULTETI">OZIQ-OVQAT MAHSULOTLARI TEXNOLOGIYASI FAKULTETI</option>
+                        <option value="NOORGANIK MODDALAR TEXNOLOGIYASI FAKULTETI">NOORGANIK MODDALAR TEXNOLOGIYASI FAKULTETI</option>
+                        <option value="YOQILG`I VA ORGANIK BIRIKMALAR KIMYOVIY TEXNOLOGIYASI FAKULTETI">YOQILG`I VA ORGANIK BIRIKMALAR KIMYOVIY TEXNOLOGIYASI FAKULTETI
+                        </option>
+                        <option value="VINOCHILIK TEXNOLOGIYASI VA SANOAT UZUMCHILIGI FAKULTETI">VINOCHILIK TEXNOLOGIYASI VA SANOAT UZUMCHILIGI FAKULTETI</option>
+                        <option value="TOSHKENT KIMYO TEXNOLOGIYA INSTITUTI QO‘NG‘IROT SODA ZAVODI QOSHIDAGI MAXSUS SIRTQI BO‘LIM">
+                            TOSHKENT KIMYO TEXNOLOGIYA INSTITUTI QO‘NG‘IROT SODA ZAVODI QOSHIDAGI
+                            MAXSUS SIRTQI BO‘LIM</option>
+                    </select>
+                </div>
+                <div class="input-group col-lg-6 mb-4">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text bg-white px-4 border-md border-right-0">
+                            <i class="fa fa-stage-solid"><img src="/svgs/chart-line-solid.svg" style="width: 17px;"
+                                    alt=""></i>
+                        </span>
+                    </div>
+                    <select id="stage" name="nechikurs"
+                        class="form-control custom-select bg-white border-left-0 border-md">
+                        <option value="disabled">Bosqich</option>
+                        <option value="1-bosqich">1-bosqich</option>
+                        <option value="2-bosqich">2-bosqich</option>
+                        <option value="3-bosqich">3-bosqich</option>
+                        <option value="4-bosqich">4-bosqich</option>
+                    </select>
+                </div>
+                <div class="input-group col-lg-6 mb-4">
+                    <span class="input-group-text bg-white px-4 border-md border-right-0">
+                        <i class="fa fa-university-solid"><img src="/svgs/mezon6.svg" style="width: 17px;" alt=""></i>
+                    </span>
+                    <select id="mezon" name="Yotoqhona"
+                        class="form-control custom-select bg-white border-left-0 border-md">
+                        <option value="<%= btn[8]%>">Tegishli me'zonni tanlang</option>
+                        <option value="<%= btn[0] %>">Kam ta'minlangan oila farzandlari</option>
+                        <option value="<%= btn[1] %>">Boquvchisini yo'qotgan kop bolali oila a'zosi</option>
+                        <option value="<%= btn[2] %>">1 va 2-guruh nogironligi bo'lgan talaba</option>
+                        <option value="<%= btn[3] %>">To'liq davlat ta'minotidagi (chin yetim)
+                        </option>
+                        <option value="<%= btn[4] %>">Oilasida 2 tadan ko'p to'lov kontrakt asosida o'qiydigan talaba</option>
+                        <option value="<%= btn[5] %>">"Temir daftar"ga tushgan oila farzandi</option>
+                        <option value="<%= btn[6] %>">Oilasida 1 va 2-guruh nogironligi yoki surunkali kasallik bilan
+                            davolanadiganlari bo'lgan talaba</option>
+                        <option value="<%= btn[7] %>"><%= btn[7] %></option>
+                        <option value="<%= btn[9] %>">Tadbirlar va jamoat ishlarida faol talaba</option>
+                    </select>
+                </div>
+                <div class="card-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="FormControlFile">Boshqa hujjatni yuklang</label>
+                            <input type="file" class="form-control-file" id="FormControlFileDocument" name="file">
+                        </div>
+                    </form>
+                    <button id="send" class="btn btn-primary">Yuborish</button>
+                </div>
+
+            </div>
+        </form>
+    </div>
+    <!-- Footer Section -->
+    <footer>
+        <div class="container">
+            <!-- Footer Content -->
+            <div class="footer-content">
+                <div class="footer-brand d-none d-lg-block">
+                    <a href="http://www.tkti.uz" target="_blank" class="footer-logo">
+                        <img src="/img/logoTCTI.png" alt="logo" width="80">
+                    </a>
+                    <h6 class="text-footer">Toshkent kimyo-texnologiya instituti</h6>
+                </div>
+                <div class="footer-right">
+                    <ul class="adress-list">
+                        <li>Toshkent sh. Navoiy ko’chasi, 32 uy, 100011</li>
+                        <li>Telefon: <a href="tel:+998712447920">(998-71)244-79-20</a> Faks: (998-71)244-79-17</li>
+                        <li><a href="mailto:E-mail: info@tcti.uz">E-mail: info@tcti.uz</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>

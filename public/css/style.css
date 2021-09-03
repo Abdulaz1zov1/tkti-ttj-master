@@ -1,0 +1,150 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+p {
+  font-size: 16px;
+  padding: 0;
+}
+
+ul,
+ol {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+/* Registration Page */
+
+.form-control:not(select) {
+  padding: 1.5rem 0.5rem;
+}
+
+select.form-control {
+  height: 52px;
+  padding-left: 0.5rem;
+}
+
+.form-control::placeholder {
+  color: #ccc;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.form-control:focus {
+  box-shadow: none;
+}
+
+/* Header section */
+
+header {
+  border-bottom: 2px solid #2fd6e2;
+}
+
+.nav-brand {
+  min-width: 200px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.text-logo {
+  color: #1349fa;
+  font-size: 15px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 0;
+  width: 280px;
+}
+
+#navbar-login {
+  position: absolute;
+  right: 20px;
+}
+
+/* Students user */
+
+#student-account {
+  position: absolute;
+  right: 20px;
+}
+
+.guide {
+  padding: 20px;
+  text-align: justify;
+}
+
+.guide-text {
+  color: #fa2323;
+}
+
+.doc-wrapper-text {
+  margin: 15px 0 15px;
+}
+
+.form-group {
+  font-weight: 600;
+}
+
+.doc-wrapper {
+    padding: 35px 0 35px;
+}
+
+.mezon-card {
+    font-weight: 600;
+  width: 780px;
+  background: linear-gradient(
+    94.36deg,
+    rgba(83, 255, 192, 0.63) 13.04%,
+    rgba(196, 196, 196, 0) 109.94%
+  );
+  margin-bottom: 20px;
+  padding: 15px;
+  border-radius: 8px;
+}
+
+.mezon-card>img {
+    margin-right: 15px;
+}
+
+/* Login Page */
+
+.login-wrapper {
+  padding: 100px 0 100px;
+  margin: 0 auto;
+}
+
+#login,
+#password,
+#login-btn {
+  margin: 0 auto;
+}
+
+/* Footer Section */
+
+footer {
+  background-color: #9fdefc;
+  padding: 30px 40px;
+}
+
+.footer-brand {
+  text-align: center;
+}
+
+.text-footer {
+  margin: 17px;
+  text-transform: uppercase;
+  font-weight: 700;
+  margin-bottom: 0;
+  width: 280px;
+}
+
+.footer-content {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+}
